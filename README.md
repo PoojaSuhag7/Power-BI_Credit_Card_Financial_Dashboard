@@ -12,8 +12,7 @@ To develop a comprehensive credit card weekly dashboard that provides real-time 
        'public cust_detail'[customer_age] >= 30 && 'public cust_detail'[customer_age] < 40, "30-40",
        'public cust_detail'[customer_age] >= 40 && 'public cust_detail'[customer_age] < 50, "40-50", 
        'public cust_detail'[customer_age] >= 50 && 'public cust_detail'[customer_age] < 60, "50-60", 
-       'public cust_detail'[customer_age] >= 60, "60+", "unknown“
- ) 
+       'public cust_detail'[customer_age] >= 60, "60+", "unknown“)
 
 - ### IncomeGroup  = SWITCH(
       TRUE(),
@@ -27,7 +26,7 @@ To develop a comprehensive credit card weekly dashboard that provides real-time 
   'public cc_detail'[week_start_date]) 
 
 - ### Revenue =
- 'public cc_detail'[annual_fees] + 'public cc_detail'[total_trans_amt] + 'public cc_detail'[interest_earned] 
+  'public cc_detail'[annual_fees] + 'public cc_detail'[total_trans_amt] + 'public cc_detail'[interest_earned] 
 
 - ### Current_week_Reveneue = CALCULATE( 
         SUM('public cc_detail'[Revenue]),
